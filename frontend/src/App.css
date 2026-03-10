@@ -1,0 +1,234 @@
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Page header */
+.page-header {
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+}
+.page-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+.date-selector label,
+.controls label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.date-selector select {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: inherit;
+  min-width: 160px;
+}
+.controls button {
+  padding: 0.5rem 1.25rem;
+}
+
+/* Error */
+.error-message {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 6px;
+  color: #ef4444;
+  font-size: 0.9rem;
+}
+
+/* Fixture list */
+.fixture-list-empty {
+  color: var(--muted);
+  font-style: italic;
+  padding: 2rem;
+}
+
+.fixture-league {
+  margin-bottom: 2rem;
+}
+.fixture-league h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.fixture-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Progress message */
+.progress-message {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.progress-loading {
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: var(--muted);
+}
+
+/* Match cards */
+.match-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+.match-card-loading {
+  opacity: 0.9;
+}
+.match-card-pending {
+  opacity: 0.7;
+}
+.match-card-error {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.match-card summary,
+.match-card-collapsed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+.match-card summary::-webkit-details-marker {
+  display: none;
+}
+.match-card summary::before {
+  content: '▼';
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-right: 0.5rem;
+  transition: transform 0.2s;
+}
+.match-card[open] summary::before {
+  transform: rotate(-90deg);
+}
+
+.card-teams {
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+}
+
+.card-status {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.card-error {
+  color: #ef4444;
+}
+
+.card-forecasts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.forecast-pill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.match-card-expanded {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.card-section {
+  margin-top: 1rem;
+}
+.card-section h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+.card-section p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.insight-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-badges {
+  display: inline-flex;
+  gap: 0.2rem;
+}
+.form-vs {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0.25rem;
+}
+.badge {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.badge-w {
+  background: rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+.badge-d {
+  background: rgba(234, 179, 8, 0.3);
+  color: #eab308;
+}
+.badge-l {
+  background: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.insight-reasoning {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.insight-reasoning li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}

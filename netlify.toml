@@ -1,0 +1,7 @@
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+# To proxy API to your backend, add in Netlify dashboard:
+# Redirect /api/* -> https://your-backend-url.com/api/:splat (status 200)
